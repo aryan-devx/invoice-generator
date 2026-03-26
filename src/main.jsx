@@ -4,9 +4,10 @@ import './index.css'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { AppContext, AppContextProvider } from './context/AppContext.jsx';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <AppContextProvider>
     <App />
-  </StrictMode>,
+  </AppContextProvider>
 )
