@@ -88,11 +88,7 @@ const InvoiceForm = () => {
     }
   }, [invoiceData.invoice.number, setInvoiceData]);
 
-  const handleSubmit = () => {
-    // For now, just log the invoice data
-    console.log("Invoice Data:", invoiceData);
-    alert("Invoice data logged to console. Implement actual submission logic.");
-  }
+
 
 
 
@@ -399,9 +395,6 @@ const InvoiceForm = () => {
             value={invoiceData.notes}
         />
       </div>
-      <button onClick={handleSubmit}
-      >Submit</button>
-
     </div>
   );
 };

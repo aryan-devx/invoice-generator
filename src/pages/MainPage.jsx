@@ -4,16 +4,38 @@ import { AppContext } from "../context/AppContext";
 import { Pencil } from "react-bootstrap-icons";
 import InvoiceForm from "../components/InvoiceForm";
 import TemplateGrid from "../components/TemplateGrid";
+import toast from "react-hot-toast";
 
 const MainPage = () => {
     const [isEditingTitle, setIsEditingTitle] = useState(false);
-    const { invoiceTitle, setInvoiceTitle } = useContext(AppContext);
-    
+    const { 
+        invoiceTitle, setInvoiceTitle, 
+        setInvoiceData,
+        setSelectedTemplate
+    } = useContext(AppContext);
+
+    const handleTemplateClick = (templateId) => {
+        // Implementation for handling template click
+        const hasInvalidItems = nvoiceData.items.some(
+            (item) => !item.quantity || !item.price 
+        );
+        if (hasInvalidItems) {
+            toast.error("Please fill in all item quantities and prices before changing the template.");
+            return;
+        }
+        setSelectedTemplate(templateId);
+        
+    };
 
     const handleTitleChange = (e) => {
         const newTitle = e.target.value;
         setInvoiceTitle(newTitle);
+        setInvoiceData((prev) => ({
+            ...prev,
+            title: newTitle
+        }));
     }
+
 
     const handleTitleEdit = (e) => {
         setIsEditingTitle(true);
@@ -64,7 +86,7 @@ const MainPage = () => {
                     {/* Template grid */}
                     <div className="col-12 col-lg-6 d-flex">
                         <div className="bg-white border rounded shadow-sm p-3 w-100">
-                            <TemplateGrid />
+                            <TemplateGrid onTemplateClick={handleTemplateClick} />
                         </div>
                     </div>
                 </div>
