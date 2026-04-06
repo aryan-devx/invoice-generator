@@ -11,11 +11,11 @@ export const initialInvoiceData = {
     shipping: {name: "", address: "", phone: ""},
     invoice: {number: "", date: "", dueDate: ""},
     account: {name: "", number: "", ifsc: ""},
-    company: {name: "", number: "", address: ""},
+    company: {name: "", phone: "", address: ""},
     tax: 0,
     notes: "",
     items: [
-        {name: "", quantity: 1, price: 0, description: "", total: 0},
+      {name: "", quantity: "", price: "", description: "", total: ""},
     ],
     logo: ""
 };
@@ -29,6 +29,8 @@ export const AppContextProvider = ({ children }) => {
   const [invoiceData, setInvoiceData] = useState(initialInvoiceData);
   const [selectedTemplate, setSelectedTemplate] = useState("template1");
 
+  const baseURL = "http://localhost:8080/api";
+
 
 
   const contextValue = {
@@ -39,6 +41,7 @@ export const AppContextProvider = ({ children }) => {
     selectedTemplate,
     setSelectedTemplate,
     initialInvoiceData,
+    baseURL,
   }
 
   return (

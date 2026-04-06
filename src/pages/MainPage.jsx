@@ -5,26 +5,27 @@ import { Pencil } from "react-bootstrap-icons";
 import InvoiceForm from "../components/InvoiceForm";
 import TemplateGrid from "../components/TemplateGrid";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const MainPage = () => {
     const [isEditingTitle, setIsEditingTitle] = useState(false);
+    const navigate = useNavigate();
     const { 
         invoiceTitle, setInvoiceTitle, 
-        setInvoiceData,
+        invoiceData, setInvoiceData,
         setSelectedTemplate
     } = useContext(AppContext);
 
     const handleTemplateClick = (templateId) => {
-        // Implementation for handling template click
-        const hasInvalidItems = nvoiceData.items.some(
-            (item) => !item.quantity || !item.price 
+        const hasInvaildItems = invoiceData.items.some(
+            (item) => !item.quantity || !item.price
         );
-        if (hasInvalidItems) {
-            toast.error("Please fill in all item quantities and prices before changing the template.");
+        if (hasInvaildItems) {
+            toast.error("Please fill in all item details before changing the template.");
             return;
         }
         setSelectedTemplate(templateId);
-        
+        navigate('/preview');
     };
 
     const handleTitleChange = (e) => {

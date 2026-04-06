@@ -1,0 +1,93 @@
+/* Template1.css - Styles for Template1 with Orange Theme */
+
+/* ===== CONTAINER ===== */
+.template1 {
+    background: #ffffff;
+    border: 1px solid #e5e7eb !important;
+}
+
+.w-800 {
+    max-width: 800px;
+}
+
+/* ===== HEADER ===== */
+.template1 .company-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ea580c;
+}
+
+.template1 .invoice-title {
+    color: #ea580c !important;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ===== TITLES ===== */
+.template1 .billing-title {
+    color: #ea580c;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ===== HR/BORDER ===== */
+.orange-border {
+    border-color: #ea580c !important;
+}
+
+/* ===== BILLING BOXES ===== */
+.billing-box {
+    background-color: #fff7ed;
+    border: 1px solid #fed7aa !important;
+    border-radius: 8px;
+}
+
+.billing-box h3 {
+    color: #ea580c;
+}
+
+/* ===== TABLE ===== */
+.template1 .table {
+    border-collapse: collapse;
+}
+
+.template1 .table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.template1 .table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.table-header {
+    background-color: #ea580c !important;
+    color: white !important;
+    font-weight: 600;
+    border: none !important;
+}
+
+.template1 .table td {
+    border-color: #e5e7eb !important;
+    padding: 10px !important;
+}
+
+/* ===== TOTALS BOX ===== */
+.totals-box {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #fff7ed;
+    border: 1px solid #fed7aa !important;
+    border-radius: 8px;
+    padding: 16px !important;
+}
+
+.total-highlight {
+    color: #ea580c;
+    border-top: 2px solid #fed7aa;
+    padding-top: 12px !important;
+}
+
+/* ===== BANK & NOTES ===== */
+.template1 h3 {
+    color: #ea580c;
+}

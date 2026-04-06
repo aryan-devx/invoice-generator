@@ -9,7 +9,7 @@ const TemplateGrid = ({ onTemplateClick }) => {
                         <div 
                             className="border rounded shadow-sm overflow-hidden template-hover cursor-pointer" 
                             title={label}
-                            onClick={() => onTemplateClick({ id})}
+                            onClick={() => onTemplateClick(id)}
                         >
                             <img 
                                 src={image} 
