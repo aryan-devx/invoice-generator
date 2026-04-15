@@ -1,0 +1,119 @@
+/* Template5.css - Minimal black/gray invoice layout */
+
+.template5 {
+	background: #ffffff;
+	border: 1px solid #e5e7eb !important;
+	color: #111827;
+}
+
+.template5-header {
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.template5 .logo-wrap img {
+	object-fit: contain;
+}
+
+.template5 .company-name {
+	font-size: 22px;
+	font-weight: 700;
+	color: #0f172a;
+}
+
+.template5 .company-address,
+.template5 .company-contact,
+.template5 .invoice-meta p {
+	font-size: 13px;
+	color: #374151;
+}
+
+.template5 .invoice-title {
+	font-size: 20px;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	color: #111827;
+}
+
+.info-card {
+	background: #fafafa;
+	border: 1px solid #e5e7eb;
+}
+
+.section-title {
+	font-size: 15px;
+	font-weight: 700;
+	color: #111827;
+}
+
+.template5-table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #d1d5db;
+}
+
+.template5-table thead th {
+	background: #f3f4f6;
+	color: #111827;
+	font-weight: 700;
+	border-bottom: 1px solid #d1d5db;
+	padding: 12px 14px;
+	white-space: nowrap;
+}
+
+.template5-table tbody tr {
+	border-top: 1px solid #e5e7eb;
+}
+
+.template5-table tbody td {
+	padding: 12px 14px;
+	vertical-align: top;
+}
+
+.template5-table .item-name {
+	font-weight: 600;
+	color: #111827;
+}
+
+.template5-table .item-desc {
+	margin-top: 4px;
+	font-size: 13px;
+	color: #6b7280;
+}
+
+.notes-block {
+	min-height: 120px;
+}
+
+.notes-block p {
+	font-size: 14px;
+	color: #374151;
+}
+
+.summary-block {
+	max-width: 320px;
+	margin-left: auto;
+	padding: 0.5rem 0;
+}
+
+.summary-row {
+	font-size: 14px;
+	color: #111827;
+}
+
+.summary-row.total-row {
+	margin-top: 8px;
+	padding-top: 10px;
+	border-top: 2px solid #d1d5db;
+	font-weight: 700;
+}
+
+@media (max-width: 767px) {
+	.template5 .invoice-meta {
+		text-align: left !important;
+	}
+
+	.summary-block {
+		max-width: 100%;
+	}
+}

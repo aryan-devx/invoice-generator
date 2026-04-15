@@ -1,0 +1,111 @@
+/* Template4.css - Blue invoice layout */
+
+.template4 {
+    background: #ffffff;
+    border: 1px solid #d6e4ff !important;
+}
+
+.template4-header {
+    border-bottom: 1px solid #dbeafe;
+}
+
+.template4-brand .company-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.template4-brand .company-address,
+.template4-brand .company-contact {
+    font-size: 14px;
+    color: #475569;
+}
+
+.invoice-meta .invoice-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d4ed8;
+    margin-bottom: 12px;
+}
+
+.detail-card {
+    background-color: #eff6ff;
+    border: 1px solid #dbeafe;
+}
+
+.detail-card .detail-title {
+    font-size: 16px;
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.invoice-table thead th {
+    background-color: #1d4ed8;
+    color: #ffffff;
+    padding: 14px 12px;
+    font-weight: 600;
+    border: none;
+}
+
+.invoice-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.invoice-table tbody td {
+    padding: 14px 12px;
+    vertical-align: middle;
+    color: #1f2937;
+}
+
+.invoice-table .description-cell {
+    min-width: 220px;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.item-desc {
+    font-size: 14px;
+    color: #475569;
+    margin-top: 4px;
+}
+
+.notes-card {
+    border: 1px solid #dbeafe;
+    background-color: #f8fafc;
+}
+
+.notes-title {
+    font-size: 16px;
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+.summary-card {
+    background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+    border: 1px solid #c7d2fe;
+}
+
+.summary-row {
+    font-size: 15px;
+    color: #0f172a;
+}
+
+.summary-row.total-row {
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 1px solid #c7d2fe;
+    font-weight: 700;
+}
+
+.thankyou-note {
+    font-size: 14px;
+    color: #475569;
+}

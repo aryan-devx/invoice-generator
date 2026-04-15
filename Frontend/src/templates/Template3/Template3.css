@@ -1,0 +1,93 @@
+/* Template3.css - Styles for Template3 with Purple Theme */
+
+/* ===== CONTAINER ===== */
+.template3 {
+    background: #ffffff;
+    border: 1px solid #e5e7eb !important;
+}
+
+.w-800 {
+    max-width: 800px;
+}
+
+/* ===== HEADER ===== */
+.template3 .company-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #7c3aed;
+}
+
+.template3 .invoice-title {
+    color: #7c3aed !important;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ===== TITLES ===== */
+.template3 .billing-title {
+    color: #7c3aed;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ===== HR/BORDER ===== */
+.purple-border {
+    border-color: #7c3aed !important;
+}
+
+/* ===== BILLING BOXES ===== */
+.billing-box {
+    background-color: #f3e8ff;
+    border: 1px solid #ddd6fe !important;
+    border-radius: 8px;
+}
+
+.billing-box h3 {
+    color: #7c3aed;
+}
+
+/* ===== TABLE ===== */
+.template3 .table {
+    border-collapse: collapse;
+}
+
+.template3 .table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.template3 .table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.table-header {
+    background-color: #7c3aed !important;
+    color: white !important;
+    font-weight: 600;
+    border: none !important;
+}
+
+.template3 .table td {
+    border-color: #e5e7eb !important;
+    padding: 10px !important;
+}
+
+/* ===== TOTALS BOX ===== */
+.totals-box {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f3e8ff;
+    border: 1px solid #ddd6fe !important;
+    border-radius: 8px;
+    padding: 16px !important;
+}
+
+.total-highlight {
+    color: #7c3aed;
+    border-top: 2px solid #ddd6fe;
+    padding-top: 12px !important;
+}
+
+/* ===== BANK & NOTES ===== */
+.template3 h3 {
+    color: #7c3aed;
+}
