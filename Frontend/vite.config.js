@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:8080",
+        target: "https://invoice-generator-production-6829.up.railway.app",
         changeOrigin: true,
       },
     },
