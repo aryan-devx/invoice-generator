@@ -12,27 +12,21 @@ const Dashboard = () => {
     const [invoices, setInvoices] = useState([]);
     const navigate = useNavigate();
     const {baseURL, setInvoiceData, setSelectedTemplate, setInvoiceTitle} = useContext(AppContext);
+    const {getToken} = useAuth();
 
-const { getToken, isLoaded, isSignedIn } = useAuth();
+    useEffect(() => {
+        const fetchInvoices = async () => {
+            try {
+                const token = await getToken();
+                const response = await getAllInvoices(baseURL, token);
+                setInvoices(response.data);
+            } catch (error) {
+                toast.error("Error fetching invoices:", error);
+            }
+        };
 
-useEffect(() => {
-    if (!isLoaded || !isSignedIn) return;
-
-    const fetchInvoices = async () => {
-        try {
-            const token = await getToken();
-            console.log("TOKEN:", token); // for debugging
-
-            const response = await getAllInvoices(baseURL, token);
-            setInvoices(response.data);
-        } catch (error) {
-            console.error(error);
-            toast.error("Error fetching invoices");
-        }
-    };
-
-    fetchInvoices();
-}, [baseURL, isLoaded, isSignedIn]);
+        fetchInvoices();
+    }, [baseURL]);
 
     const handleViewClick = (invoice) => {
         setInvoiceData(invoice);
