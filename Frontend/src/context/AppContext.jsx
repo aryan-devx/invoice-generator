@@ -28,8 +28,7 @@ export const AppContextProvider = ({ children }) => {
   const [invoiceTitle, setInvoiceTitle] = useState("New Invoice");
   const [invoiceData, setInvoiceData] = useState(initialInvoiceData);
   const [selectedTemplate, setSelectedTemplate] = useState("template1");
-
-  const baseURL = import.meta.env.VITE_API_URL || "/api";
+const baseURL = import.meta.env.VITE_API_URL;
 
 
 
