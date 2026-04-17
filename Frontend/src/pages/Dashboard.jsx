@@ -12,21 +12,30 @@ const Dashboard = () => {
     const [invoices, setInvoices] = useState([]);
     const navigate = useNavigate();
     const {baseURL, setInvoiceData, setSelectedTemplate, setInvoiceTitle} = useContext(AppContext);
-    const {getToken} = useAuth();
+    const { getToken, isLoaded, isSignedIn } = useAuth();
 
     useEffect(() => {
         const fetchInvoices = async () => {
+            if (!isLoaded || !isSignedIn) {
+                return;
+            }
+
             try {
                 const token = await getToken();
+                if (!token) {
+                    toast.error("Authentication token is missing. Please sign in again.");
+                    return;
+                }
                 const response = await getAllInvoices(baseURL, token);
                 setInvoices(response.data);
             } catch (error) {
-                toast.error("Error fetching invoices:", error);
+                const message = error?.response?.data?.message || error?.message || "Error fetching invoices";
+                toast.error(message);
             }
         };
 
         fetchInvoices();
-    }, [baseURL]);
+    }, [baseURL, getToken, isLoaded, isSignedIn]);
 
     const handleViewClick = (invoice) => {
         setInvoiceData(invoice);

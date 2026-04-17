@@ -18,6 +18,10 @@ const UserSyncHandler = () => {
 
             try {
                 const token = await getToken();
+                if (!token) {
+                    toast.error("Authentication token is missing. Please sign in again.");
+                    return;
+                }
                 const userData = {
                     clerkId: user.id,
                     email: user.primaryEmailAddress?.emailAddress || "",

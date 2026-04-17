@@ -43,6 +43,10 @@ const PreviewPage = () => {
             }
 
             const token = await getToken();
+            if (!token) {
+                toast.error("Authentication token is missing. Please sign in again.");
+                return;
+            }
             const response = await saveInvoice(baseURL, payload, token);
             if (response.status === 200) {
                 toast.success("Invoice saved successfully!");
@@ -67,6 +71,10 @@ const PreviewPage = () => {
         try {
             setLoading(true);
             const token = await getToken();
+            if (!token) {
+                toast.error("Authentication token is missing. Please sign in again.");
+                return;
+            }
             const response = await deleteInvoice(baseURL, invoiceId, token);
             if (response.status >= 200 && response.status < 300) {
                 toast.success("Invoice deleted successfully!");
@@ -110,6 +118,10 @@ const PreviewPage = () => {
             }
 
             const token = await getToken();
+            if (!token) {
+                toast.error("Authentication token is missing. Please sign in again.");
+                return;
+            }
             const response = await sendInvoice(baseURL, formData, token);
             if (response.status === 200) {
                 toast.success("Invoice sent successfully!");
